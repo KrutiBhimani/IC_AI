@@ -1,25 +1,36 @@
-import logo from './logo.svg';
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Selections from './Dataroom';
+import Drive from './components/Drive/Drive';
+import DropboxIntegration from './DropBox/Dropbox';
+import TwoFactorAuth from './Auth/TwoFactorAuth';
+import Login from './Auth/Login';
+// import TextTranslation from './open-ai/TextTranslate'; 
 import './App.css';
 
-function App() {
+const SuccessPage = () => {
+  return <h1>Authentication Successful!</h1>;
+};
+
+const ErrorPage = () => {
+  return <h1>Authentication Failed!</h1>;
+};
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/2factor" element={<TwoFactorAuth />} />
+        <Route path="/dashboard" element={<Selections />} />
+        <Route path="/drive" element={<Drive />} />
+        <Route path="/auth/callback" element={<DropboxIntegration />} />
+        {/* <Route path="/translate" element={<TextTranslation />} /> */}
+        <Route path="/success" element={<SuccessPage />} />
+        <Route path="/error" element={<ErrorPage />} />
+      </Routes>
+    </BrowserRouter>
   );
-}
+};
 
 export default App;

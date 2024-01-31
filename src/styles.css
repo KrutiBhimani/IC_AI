@@ -1,0 +1,393 @@
+body {
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 91%;
+}
+
+.folder-button {
+  border: none;
+  background-color: transparent;
+  width: 100%;
+}
+
+.add-folder-button {
+  padding: 8px 20px !important;
+  text-transform: uppercase;
+  font-weight: 600 !important;
+}
+
+.add-folder-button:hover {
+  background-color: #f0f0f0 !important;
+}
+
+.top-container {
+  border: 1px solid #d2d2d2;
+  padding: 10px 0px;
+}
+
+.body-container {
+  display: flex;
+  height: 100%;
+}
+
+.file-item {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.navigation-panel {
+  padding: 10px;
+  border-bottom: 1px solid #d2d2d2;
+  color: gray;
+  font-weight: 600;
+}
+
+.back-button {
+  padding: 0 10px 0px 0px !important
+}
+
+.back-button svg {
+  height: 30px;
+  width: 30px;
+  fill: gray;
+}
+
+.navigation-history svg {
+  margin: 0px 6px 0px 10px;
+}
+
+.file-name {
+  text-align: start;
+  flex-grow: 1;
+}
+
+.file-detail {
+  padding-top: 10px;
+  display: flex;
+  justify-content: space-between
+}
+
+.ellipsis {
+  align-self: flex-end;
+  padding: 0px 0px 0px 6px;
+  font-weight: bolder;
+}
+
+.file-item:hover {
+  background-color: rgb(213, 243, 253);
+  border-radius: 10px;
+}
+
+.sidebar {
+  list-style: none;
+  padding-left: 0px;
+}
+
+.sub-folder {
+  list-style: none;
+}
+
+.sidebar-list-item {
+  padding-left: 14px;
+}
+
+.icon-image {
+  height: 15px;
+  padding: 0px 8px 0px 8px;
+  margin: 10px 0px;
+}
+
+.folder.icon-image {
+  height: 15px;
+  padding: 0px 6px;
+}
+
+ul {
+  margin-bottom: 0 !important;
+}
+
+.sidebar-file-link:hover {
+  background-color: rgb(213, 243, 253);
+  border-radius: 6px;
+}
+
+.view-mode-buttons {
+  float: right;
+  margin-right: 20px;
+}
+
+.grid-icon {
+  background-color: transparent;
+  border-top-left-radius: 45%;
+  border-bottom-left-radius: 45%;
+  padding: 4px 5px 8px 10px;
+  border: 1px solid #bfbfbf;
+}
+
+.list-icon {
+  background-color: transparent;
+  border-top-right-radius: 45%;
+  border-bottom-right-radius: 45%;
+  padding: 4px 10px 8px 5px;
+  border: 1px solid #bfbfbf;
+}
+
+.grid-icon svg,
+.list-icon svg {
+  height: 22px;
+  width: 22px;
+  fill: #a2a2a2;
+}
+
+.grid-icon.active,
+.list-icon.active {
+  background-color: rgb(213, 243, 253);
+}
+
+td {
+  border-bottom-width: 0 !important;
+}
+
+.table tr:hover td {
+  background-color: rgb(213, 243, 253);
+}
+
+.table tr:hover td:first-child {
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+
+.table tr:hover td:last-child {
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.table {
+  margin: 10px;
+  width: 98% !important;
+}
+
+.list-icon-image {
+  height: 15px;
+  padding: 0px 8px 0px 8px;
+}
+
+.dropbtn {
+  background-color: transparent;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 100px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 7px;
+  margin-left: -80px;
+  margin-top: -10px;
+}
+
+.dropdown-content button {
+  text-align: start;
+  width: 100%;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  border: none;
+  background-color: transparent;
+  z-index: 1000;
+}
+
+.dropdown-content button:hover {
+  background-color: rgb(221, 247, 255);
+  border-radius: 7px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.preview-container {
+  position: relative;
+}
+
+.close-button {
+  position: absolute;
+  right: 10px;
+  border: none;
+  background-color: rgb(181, 220, 234);
+  padding: 10px 30px;
+  border-radius: 30px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 15px;
+  margin-top: 10px;
+}
+
+.close-button:hover {
+  background-color: rgb(213, 243, 253);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ccc;
+  padding: 17px 20px 20px 20px !important;
+}
+
+.navbar__logo {
+  float: left;
+}
+
+.navbar__user {
+  display: flex;
+  align-items: center;
+}
+
+.navbar__user-info {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.navbar__avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.navbar__username {
+  color: gray;
+  padding-right: 25px;
+}
+
+.navbar__dropdown {
+  position: relative;
+}
+
+.navbar__dropdown-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.navbar__dropdown-content {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #f9f9f9;
+  min-width: 120px;
+  z-index: 1;
+  display: none;
+  box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.08);
+}
+
+.navbar__dropdown-content a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #333;
+}
+
+.navbar__dropdown-content button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  text-align: left;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.navbar__dropdown:hover .navbar__dropdown-content {
+  display: block;
+}
+
+.dataroom-file-button {
+  width: 425px;
+  height: 54px;
+  border-radius: 5px;
+  border: 1.5px solid #EDF1F4;
+  background: #FFF;
+  text-align: start;
+  color: #6F6F6F;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 1.5px;
+  padding-left: 13px;
+  box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.08);
+}
+
+.dataroom-files-open {
+  border-radius: 3px;
+  background: #1B3147;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  color: #D8AC4A;
+  font-size: 13px;
+  width: 26px;
+  height: 26px;
+  padding: 0;
+  border: 0;
+  margin-left: 23px;
+  margin-bottom: 20px;
+}
+
+.dataroom-file-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 15px;
+  margin-bottom: 20px;
+}
+
+.dataroom-file-button span {
+  flex: 1;
+}
+
+.extra-div {
+  margin-right: 15px;
+  width: 17.792px;
+  height: 17.792px;
+}
+
+.dataroom-main {
+  display: flex;
+  align-items: center;
+}
+
+.dataroom-files {
+  margin-left: 80px;
+}
+
+.welcome-text {
+  color: #6F6F6F;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: bolder;
+  line-height: normal;
+  letter-spacing: 3.2px;
+  font-family: 'Poppins';
+}
+
+.main-container {
+  margin-left: 80px;
+  margin-top: 70px
+}
+
+body{
+  font-family: 'Poppins' !important;
+}
